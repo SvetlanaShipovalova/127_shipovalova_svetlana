@@ -3,14 +3,22 @@ public class Task_1 implements Task_1_base {
     public int subtask_1_if(int first, int second, int third) {
         // Вычислить и вернуть минимальный из трех полученных аргументов (first, second, third)
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        if ((first < second) && (first < third))
+            return first;
+        else if (second < first && second < third)
+            return second;
+        else
+            return third;
     }
     @Override
     public boolean subtask_2_if(int year) {
         // Проверить, является ли год, переданный в параметре year, високосным.
         // Високосный год - это год, кратный четырем, но не кратный 100, либо кратный 400
         // ------------------------------------------------------------------------------------
-        return false; // Замените данный оператор кодом, решающим поставленную задачу.
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+            return true;
+        else
+            return false;
     }
     @Override
     public int subtask_3_if(double x, double y, double left_up_x, double left_up_y, double width, double height) {
