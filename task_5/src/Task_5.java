@@ -59,7 +59,6 @@ public class Task_5 implements Task_5_base {
         // Дан список чисел. Сформировать словарь, содержащий среднее,
         // максимальное и минимальное значения из данного списка. Ключи
         // словаря "mean", "max", "min" соответственно
-
         HashMap<String, Double> hm = new HashMap();
         hm.put("max", (Double) Collections.max(data));
         hm.put("min", (Double)Collections.min(data));
