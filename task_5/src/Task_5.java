@@ -54,7 +54,6 @@ public class Task_5 implements Task_5_base {
         // для данного списка в процентах
         return null;
     }
-
     @Override
     public HashMap<String, Double> subtask_8_HashMap(ArrayList<Double> data) {
         // Дан список чисел. Сформировать словарь, содержащий среднее,
