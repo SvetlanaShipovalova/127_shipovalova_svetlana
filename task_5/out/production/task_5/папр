@@ -61,13 +61,13 @@ public class Task_5 implements Task_5_base {
         // максимальное и минимальное значения из данного списка. Ключи
         // словаря "mean", "max", "min" соответственно
 
-        HashMap<String, Double> hm = new HashMap();
-        hm.put("max", (Double) Collections.max(data));
-        hm.put("min", (Double)Collections.min(data));
-        hm.put("mean", data.stream().mapToDouble((i) -> {
-            return i;
-        }).average().getAsDouble());
-        return hm;
+            HashMap<String, Double> hm = new HashMap();
+            hm.put("max", (Double) Collections.max(data));
+            hm.put("min", (Double)Collections.min(data));
+            hm.put("mean", data.stream().mapToDouble((i) -> {
+                return i;
+            }).average().getAsDouble());
+            return hm;
+        }
     }
-}
 

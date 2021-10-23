@@ -1,26 +1,52 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.Arrays;
+
 public class Task_4 implements Task_4_base {
-    @Override
+    public Task_4() {
+    }
+
     public int[] subtask_1_arrays(int size, int a0, int d) {
-        // сгенерировать и вернуть массив размера size, содержащий элементы
-        // арифметической прогрессии с первым членом a0 и разностью d
-        return null;
+        int[] intAr = new int[size];
+        intAr[0] = a0;
+
+        for(int i = 1; i < size; ++i) {
+            intAr[i] = intAr[i - 1] + d;
+        }
+
+        return intAr;
     }
 
-    @Override
     public int[] subtask_2_arrays(int size) {
-        // сгенерировать и вернуть массив размера size, первые два элемента
-        // которого равны единице, а каждый следующий - сумме всех предыдущих
-        return null;
+        int[] intAr = new int[size];
+        intAr[0] = 1;
+        if (size > 1) {
+            intAr[1] = 1;
+
+            for(int i = 2; i < size; ++i) {
+                intAr[i] = Arrays.stream(intAr).sum();
+            }
+        }
+
+        return intAr;
     }
 
-    @Override
     public int[] subtask_3_arrays(int size) {
-        // сгенерировать и вернуть массив размера size, содержащий первые
-        // size чисел последовательности фибоначчи.
-        // https://ru.wikipedia.org/wiki/Числа_Фибоначчи
-        return null;
-    }
+        int[] intAr = new int[size];
+        intAr[0] = 0;
+        if (size > 1) {
+            intAr[1] = 1;
 
+            for(int i = 2; i < size; ++i) {
+                intAr[i] = intAr[i - 1] + intAr[i - 2];
+            }
+        }
+
+        return intAr;
+    }
     @Override
     public int subtask_4_arrays(int[] data) {
         // Для данного массива вычислить максимальный элемент
