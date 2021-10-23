@@ -52,9 +52,38 @@ public class Task_1 implements Task_1_base {
         // с большой буквы. Дни едели отсчитываются с единицы. Если номер задан некорректно,
         // вернуть строку "Ошибка"
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
-    }
-    @Override
+        String var10000;
+            switch(day_od_week) {
+                case 1:
+                    var10000 = "Понедельник";
+                    break;
+                case 2:
+                    var10000 = "Вторник";
+                    break;
+                case 3:
+                    var10000 = "Среда";
+                    break;
+                case 4:
+                    var10000 = "Четверг";
+                    break;
+                case 5:
+                    var10000 = "Пятница";
+                    break;
+                case 6:
+                    var10000 = "Суббота";
+                    break;
+                case 7:
+                    var10000 = "Воскресенье";
+                    break;
+                default:
+                    var10000 = "Ошибка";
+            }
+
+            String result = var10000;
+            return result;
+        }
+
+        @Override
     public String subtask_6_switch(int direction) {
         // По заданному направлению direction вернуть его название:
         // 1 - север
@@ -63,8 +92,28 @@ public class Task_1 implements Task_1_base {
         // 4 - восток
         // Во всех остальных случаях вернуть пустую строку
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
-    }
+            String var10000;
+            switch(direction) {
+                case 1:
+                    var10000 = "север";
+                    break;
+                case 2:
+                    var10000 = "юг";
+                    break;
+                case 3:
+                    var10000 = "запад";
+                    break;
+                case 4:
+                    var10000 = "восток";
+                    break;
+                default:
+                    var10000 = "";
+            }
+
+            return var10000;
+        }
+// Замените данный оператор кодом, решающим поставленную задачу.
+
     @Override
     public int subtask_7_if(double vx, double vy, double vz, double speed, double time, double wall) {
         // Проверить, достигнет ли снаряд, летяший из точки (0, 0, 0)
