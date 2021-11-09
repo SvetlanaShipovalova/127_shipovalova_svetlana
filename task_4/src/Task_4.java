@@ -47,11 +47,18 @@ public class Task_4 implements Task_4_base {
 
         return intAr;
     }
-    @Override
     public int subtask_4_arrays(int[] data) {
-        // Для данного массива вычислить максимальный элемент
-        return 0;
+        int max = data[0];
+
+        for(int i = 1; i < data.length; ++i) {
+            if (data[i] > max) {
+                max = data[i];
+            }
+        }
+
+        return max;
     }
+
 
     @Override
     public int subtask_5_arrays(int[] data, int k) {
