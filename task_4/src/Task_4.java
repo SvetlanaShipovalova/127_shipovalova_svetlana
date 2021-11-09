@@ -59,23 +59,36 @@ public class Task_4 implements Task_4_base {
         return max;
     }
 
-
-    @Override
     public int subtask_5_arrays(int[] data, int k) {
-        // Для данного массива вычислить максимальный элемент
-        // кратный k. Гарантируется, что как минумум один такой элемент
-        // в массиве есть
-        return 0;
+        int max = -5;
+
+        for(int i = 1; i < data.length; ++i) {
+            if (data[i] > max && data[i] % k == 0) {
+                max = data[i];
+            }
+        }
+
+        return max;
     }
 
-    @Override
     public int[] subtask_6_arrays(int[] arr1, int[] arr2) {
-        // Даны два массива arr1, arr2.
-        // Произвести слияние данных массивов в один отсортированный
-        // по возрастанию массив.
-        return null;
-    }
+        int[] a = new int[arr1.length + arr2.length];
+        int k = 0;
 
+        int j;
+        for(j = 0; j < arr1.length; ++j) {
+            a[j] = arr1[j];
+            ++k;
+        }
+
+        for(j = 0; j < arr2.length; ++j) {
+            a[k] = arr2[j];
+            ++k;
+        }
+
+        Arrays.sort(a);
+        return a;
+    }
     @Override
     public int[] subtask_7_arrays(int[] arr1, int[] arr2) {
         // Даны два отсортированных по возрастанию массива arr1, arr2.
