@@ -89,6 +89,7 @@ public class Task_4 implements Task_4_base {
         Arrays.sort(a);
         return a;
     }
+
     @Override
     public int[] subtask_7_arrays(int[] arr1, int[] arr2) {
         // Даны два отсортированных по возрастанию массива arr1, arr2.
