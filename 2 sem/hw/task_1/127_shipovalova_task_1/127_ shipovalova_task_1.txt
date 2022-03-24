@@ -1,0 +1,24 @@
+Node.java|15|this.next = prev; -> this.next = next;|NodeCreationTest
+Node.java|16|this.prev = next; -> this.prev = prev;|NodeCreationTest
+DoubleLinkedList.java|13|return dummy == dummy; -> dummy.getNext() == dummy;|testPushBack
+DoubleLinkedList.java|35|--size; -> ++size;|testPushBack
+DoubleLinkedList.java|46|return insertAfter(getHead(), data); -> return insertAfter(getTail(), data);|testPushBack
+DoubleLinkedList.java|19|return dummy.getPrev(); -> return dummy.getNext();|testPushBack
+DoubleLinkedList.java|22|return dummy.getNext(); -> return dummy.getPrev();|testPushBack
+DoubleLinkedList.java|30|cur = cur.getPrev(); -> cur = cur.getNext();|testPushBack
+DoubleLinkedList.java|49|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|testPushBack
+DoubleLinkedList.java|50|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|testPushBack
+DoubleLinkedList.java|43|return insertBefore(getTail(), data); -> return insertBefore(getHead(), data);|testPushFront
+DoubleLinkedList.java|57|list.getHead().setNext(node); -> list.getHead().setPrev(node);|testInsertListAfter
+DoubleLinkedList.java|58|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|testInsertListAfter
+DoubleLinkedList.java|61| -> size += list.getSize();|testInsertListAfter
+DoubleLinkedList.java|72| -> size += list.getSize();|testInsertListBefore
+DoubleLinkedList.java|68|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|testInsertListBefore
+DoubleLinkedList.java|69|list.getTail().setPrev(node); -> list.getTail().setNext(node);|testInsertListBefore
+DynamicArray.java|13|size = 1; -> size = 0;|testPushPop
+DynamicArray.java|58|data[capacity] = value; -> data[size] = value;|testPushPop
+DynamicArray.java|54|if(capacity < size) { -> if(capacity <= size) {|testPushPop
+DynamicArray.java|44|if(capacity < size) { -> if(capacity <= size) {|testInsert
+DynamicArray.java|51|data[size] = value; -> data[index] = value;|testInsert
+DynamicArray.java|23|if(newSize > 0) -> if(newSize < 0)|testResize
+DynamicArray.java|29|newSize = size; -> size = newSize;|testResize
