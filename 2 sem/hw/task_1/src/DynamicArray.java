@@ -8,11 +8,11 @@ public class DynamicArray<T> {
 
     public DynamicArray() {
         data = new Object[DefaultSize];
-        size = 0;
+        size = DefaultSize;
         capacity = DefaultSize;
     }
     public DynamicArray(int size) {
-        data = new Object[capacity];
+        data = new Object[size];
         this.size = size;
         capacity = size;
     }
@@ -27,17 +27,17 @@ public class DynamicArray<T> {
         size = newSize;
     }
     public T get(int index) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of bounds");
         return (T)data[index];
     }
     public void set(int index, T value) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of bounds");
         data[index] = value;
     }
     public void insert(int index, T value) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of bounds");
         if(capacity <= size) {
             data = Arrays.copyOf(data, size * 2);
@@ -57,13 +57,13 @@ public class DynamicArray<T> {
         ++size;
     }
     public void popBack() {
-        if(size < 0)
+        if(size <= 0)
             throw new UnsupportedOperationException("Array is empty");
         --size;
         data[size] = null;
     }
     public void remove(int index) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of bounds");
         for(int i = index + 1; i < size; ++i)
             data[i - 1] = data[i];

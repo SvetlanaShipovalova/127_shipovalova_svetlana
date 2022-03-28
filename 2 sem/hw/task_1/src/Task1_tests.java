@@ -1,6 +1,6 @@
 import org.junit.*;
 
-public class Task1_tests extends Assert {
+public class Task1_Tests extends Assert {
 
     @Test
     public void pushFront_ToEmptyList_False() {
@@ -58,15 +58,6 @@ public class Task1_tests extends Assert {
     }
 
 
-    @Test
-    public void removeItem_RemoveFirstItem_SizeIsCorrect() {
-        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
-        list.pushFront(9);
-        list.pushFront(8);
-        list.pushFront(7);
-        list.remove(list.get(0));
-        assertEquals(2, list.getSize());
-    }
 
     @Test
     public void removeFirstItem() {
