@@ -9,7 +9,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void bubbleSort_ArrayContainsOnlyNumbersOne_ArrayHasNotChanged(){
+    public void bubbleSort_ContainsOnlyNumbers(){
         try {
             BubbleSort<Integer> bubbleSort = new BubbleSort<>();
             Integer[] arr = {3, 3, 3};
@@ -22,7 +22,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void bubbleSort_InvertedArrayWithTheSameLastTheBiggestElement_GetSortedArray(){
+    public void bubbleSort_TheBiggestElement(){
         BubbleSort<Integer> bubbleSort = new BubbleSort<>();
         Integer[] arr = {8, 5, 4, 9};
         bubbleSort.sort(arr, new TestComparator());
@@ -38,7 +38,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void bubbleSort_UnsortedArray_GetSortedArray(){
+    public void bubbleSort_UnsortedArray(){
         BubbleSort<Integer> bubbleSort = new BubbleSort<>();
         Integer[] arr = {8,16,3,1};
         bubbleSort.sort(arr, new TestComparator());
@@ -46,7 +46,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void selectionSort_InvertedArrayLengthTwo_GetSortedArray(){
+    public void selectionSort_InvertedArray(){
         SelectionSort<Integer> selectionSort = new SelectionSort<>();
         Integer[] arr = {2, 1};
         selectionSort.sort(arr, new TestComparator());
@@ -54,7 +54,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void selectionSort_UnsortedArray_GetSortedArray(){
+    public void selectionSort_UnsortedArray(){
         SelectionSort<Integer> selectionSort = new SelectionSort<>();
         Integer[] arr = {4, 3, 44, 1};
         selectionSort.sort(arr, new TestComparator());
@@ -62,7 +62,7 @@ public class Task2_Tests extends Assert{
     }
 
     @Test
-    public void insertionSort_ArrayContainsOnlyNumbersOne_ArrayHasNotChanged(){
+    public void insertionSort_ContainsOnlyNumbers(){
         try {
             InsertionSort<Integer> insertionSort = new InsertionSort<>();
             Integer[] arr = {5, 5};
