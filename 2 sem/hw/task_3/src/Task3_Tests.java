@@ -9,7 +9,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void quickSort_UnsortedArrayWithLengthTwo_GetSortedArray(){
+    public void quickSort_UnsortedArray(){
         try {
             Integer[] arr = new Integer[]{2,1};
             QuickSort quickSort = new QuickSort();
@@ -21,7 +21,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void quickSort_UnsortedArrayWithTwoZeroAndLengthFour_GetSortedArray(){
+    public void quickSort_Unsorted_GetSortedArray(){
         try {
             Integer[] arr = new Integer[]{6, 1,5,1};
             QuickSort quickSort = new QuickSort();
@@ -45,7 +45,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void mergeSort_UnsortedArrayWithLengthTwo_GetSortedArray(){
+    public void mergeSort_GetSortedArray(){
         try {
             Integer[] arr = new Integer[]{2,1};
             MergeSort mergeSort = new MergeSort();
@@ -57,7 +57,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void mergeSort_UnsortedOnlyFirstTwoElements_GetSortedArray(){
+    public void mergeSort_GetSortedOnlyFirstElements(){
         try {
             Integer[] arr = new Integer[]{2,1,2,3};
             MergeSort mergeSort = new MergeSort();
@@ -69,7 +69,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void mergeSort_UnsortedArrayV1_GetSortedArray(){
+    public void mergeSort_UnsortedArray1(){
         try {
             Integer[] arr = new Integer[]{3,2,6,2};
             MergeSort mergeSort = new MergeSort();
@@ -81,7 +81,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void mergeSort_UnsortedArrayV2_GetSortedArray(){
+    public void mergeSort_UnsortedArray2(){
         try {
             Integer[] arr = new Integer[]{10,5,0,5};
             MergeSort mergeSort = new MergeSort();
@@ -93,7 +93,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void mergeSort_UnsortedArrayV3_GetSortedArray(){
+    public void mergeSort_UnsortedArray3(){
         try {
             Integer[] arr = new Integer[]{1,1,6,7,7,6,1,7};
             MergeSort mergeSort = new MergeSort();
@@ -105,7 +105,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void heapSort_ArrayContainsOnlyTwoNumbersOne_GetUnchangedArray(){
+    public void heapSort_ArrayContainsTwoNumbers(){
         try {
             Integer[] arr = new Integer[]{1,1};
             HeapSort heapSort = new HeapSort();
@@ -117,7 +117,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void heapSort_SortedArrayLengthTwo_GetUnchangedArray(){
+    public void heapSort_SortedArrayLengthTwo(){
         try {
             Integer[] arr = new Integer[]{1,2};
             HeapSort heapSort = new HeapSort();
@@ -129,7 +129,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void heapSort_SortedArrayLengthThree_GetUnchangedArray(){
+    public void heapSort_SortedArrayLengthThree(){
         try {
             Integer[] arr = new Integer[]{1,2,3};
             HeapSort heapSort = new HeapSort();
@@ -141,7 +141,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void heapSort_UnsortedArrayV1_GetUnchangedArray(){
+    public void heapSort_UnsortedArray1(){
         try {
             Integer[] arr = new Integer[]{8,3,5,4,3,8};
             HeapSort heapSort = new HeapSort();
@@ -153,7 +153,7 @@ public class Task3_Tests extends Assert {
     }
 
     @Test
-    public void heapSort_UnsortedArrayV2_GetUnchangedArray(){
+    public void heapSort_UnsortedArray2(){
         try {
             Integer[] arr = new Integer[]{79,78,75,76,75,76,80,77,78,75,82,80};
             HeapSort heapSort = new HeapSort();
