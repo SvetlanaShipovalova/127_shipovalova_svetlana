@@ -1,6 +1,6 @@
 import org.junit.*;
 
-public class Task1_tests extends Assert {
+public class Task1_Tests extends Assert {
 
     @Test
     public void pushFront_ToEmptyList_False() {
