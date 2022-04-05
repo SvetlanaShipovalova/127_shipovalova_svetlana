@@ -23,10 +23,10 @@ public class Task3_Tests extends Assert {
     @Test
     public void quickSort_Unsorted_GetSortedArray(){
         try {
-            Integer[] arr = new Integer[]{6, 1,5,1};
+            Integer[] arr = new Integer[]{3,4,5,6,7,6,5,4,3};
             QuickSort quickSort = new QuickSort();
             quickSort.sort(arr, new TestComparator());
-            assertArrayEquals(new Integer[]{1,1,5,6}, arr);
+            assertArrayEquals(new Integer[]{3,3,4,4,5,5,6,6,7}, arr);
         }catch (Exception e){
             fail();
         }
@@ -35,10 +35,10 @@ public class Task3_Tests extends Assert {
     @Test
     public void quickSort_UnsortedArray_GetSortedArray(){
         try {
-            Integer[] arr = new Integer[]{2,9,2,4,3};
+            Integer[] arr = new Integer[]{11,13,12,16,14,12,16,13,15,11,12,12,12,15,14,13,11};
             QuickSort quickSort = new QuickSort();
             quickSort.sort(arr, new TestComparator());
-            assertArrayEquals(new Integer[]{2,2,3,4,9}, arr);
+            assertArrayEquals(new Integer[]{11,11,11,12,12,12,12,12,13,13,13,14,14,15,15,16,16}, arr);
         }catch (Exception e){
             fail();
         }
