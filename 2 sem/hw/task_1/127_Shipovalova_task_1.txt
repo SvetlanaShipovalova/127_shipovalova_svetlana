@@ -5,8 +5,8 @@ DoubleLinkedList.java | 41 | return insertBefore(getTail(), data);-> return inse
 Node.java| 13 | this.next = prev;-> this.next = next;| PushFrontThreeItems
 Node.java | 14 | this.prev = next;-> this.prev = prev;| PushFrontThreeItems
 DoubleLinkedList.java | 17 | return dummy.getPrev(); -> return dummy.getNext();| pushFrontThreeItems_H
-DoubleLinkedList.java | 28 | cur = cur.getPrev();-> cur = cur.getNext(); | PushFrontThreeItems
-DoubleLinkedList.java | 33 | --size; -> ++size; | PushFrontThreeItems
+DoubleLinkedList.java | 28 | cur = cur.getPrev();-> cur = cur.getNext(); | pushItems_PushFrontThreeItems_Second
+DoubleLinkedList.java | 33 | --size; -> ++size; | pushItems_PushFrontThreeItems_Second
 DoubleLinkedList.java | 44 | return insertBefore(getTail(), data);-> return insertBefore(getHead(), data); | public void pushBack_SecondItem
 DoubleLinkedList.java | 47 | node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext()); | removeFirstItem
 DoubleLinkedList.java | 48 | node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev()); | removeFirstItem
