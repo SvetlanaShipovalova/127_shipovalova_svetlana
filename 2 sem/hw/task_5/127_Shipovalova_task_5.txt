@@ -67,7 +67,33 @@ AVL_3
 68 x x
 
 RB_1
+28 21 65 b
+21 13 24 b
+13 8 15 r
+8 x 9 b
+9 x x r
+15 x x b
+24 23 x b
+23 x x r
+65 34 74 b
+34 x x b
+74 x 93 b
+93 x x r
 
 RB_2
+59 46 73 b
+46 30 51 b
+30 28 39 b
+28 x x r
+39 x x r
+51 x x b
+73 72 95 b
+72 x x b
+95 x x b
 
 RB_3
+43 27 75 b
+27 5 x b
+5 x x r
+75 65 x b
+65 x x r
