@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class AVLTree<T> implements BinarySearchTree<T> {
     private MyComparator<T> comparator;
@@ -79,8 +80,10 @@ public class AVLTree<T> implements BinarySearchTree<T> {
     }
 
     private AVLTreeNode insertRec(AVLTreeNode root, T value) {
-        if(comparator.compare(value, root.data) == 0)
+        if(comparator.compare(value, root.data) == 0) {
+            --size;
             return root;
+        }
         else if(comparator.compare(value, root.data) < 0) {
             return insertToLeftRec(root, value);
         }
@@ -155,13 +158,13 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         } else {
             return removeFromLeft(node);
         }
-        return null;
+        return root;
     }
 
     private AVLTreeNode removeFromLeft(AVLTreeNode node) {
         AVLTreeNode pred = maxRec(node.left);
         node.data = pred.data;
-        deleteRec(pred);
+        var nRoot = deleteRec(pred);
 
         node.restoreHeight();
         if(node.balance() == -2) {
@@ -175,13 +178,13 @@ public class AVLTree<T> implements BinarySearchTree<T> {
                 return rotateLeft(root);
             }
         }
-        return null;
+        return nRoot;
     }
 
     private AVLTreeNode removeFromRight(AVLTreeNode node) {
         AVLTreeNode succ = minRec(node.right);
         node.data = succ.data;
-        deleteRec(succ);
+        var nRoot = deleteRec(succ);
 
         node.restoreHeight();
         if(node.balance() == 2) {
@@ -194,7 +197,7 @@ public class AVLTree<T> implements BinarySearchTree<T> {
                 return rotateRight(root);
             }
         }
-        return null;
+        return nRoot;
     }
 
     private boolean isLeaf(AVLTreeNode node) {
